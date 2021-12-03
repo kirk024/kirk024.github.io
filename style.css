@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+  }
+
+  div ul{
+    list-style-type: none;
+  }
+
+  body {
+    height: fit-content;
+    position: relative;
+    flex: auto;
+  }
+
+  .navbar {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.left-navbar {
+    text-decoration: none;
+    overflow: hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin-right: 1px;
+    text-align: center;
+    display: inline;
+    color: white;
+    background-color: black;
+    background-position-x: left;
+  }
+
+.jpfontsize {
+  font-size: 12px !important;
+}
+
+.right-navbar {
+    text-decoration: none;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    text-align: center;
+    display: inline;
+    color: white;
+    background-color: black;
+    background-position-x: right;
+    vertical-align: baseline;
+}
+
+  img.searchicon {
+    float: left;
+    width: 5%;
+  
+    }
+
+  .bg-dark {
+        background-color: black !important;
+    
+}
