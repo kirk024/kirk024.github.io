@@ -1,3 +1,5 @@
+/* Header */
+
 .navbar.navbar-expand-lg {
     margin:0 auto; /*center the element*/
     width: 81% !important;/* customize width you want */
@@ -50,6 +52,8 @@
     color:#2d61bf;
     font-size: 5px;
 }
+
+/* Header */
 
 .belowheader {
     margin-left: 164px;
@@ -183,6 +187,8 @@ img.redheart {
     margin-bottom: 100px;
 }
 
+/* Footer */
+
 .navbar.navbar-expand-lg.footy {
     margin:0 auto; /*center the element*/
     width: 81% !important;/* customize width you want */
@@ -224,3 +230,5 @@ img.redheart {
     text-decoration: underline;
     text-decoration-color: white;
 }
+
+/* Footer */
