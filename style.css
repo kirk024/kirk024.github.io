@@ -1,6 +1,6 @@
 .navbar.navbar-expand-lg {
     margin:0 auto; /*center the element*/
-    width: 80% !important;/* customize width you want */
+    width: 81% !important;/* customize width you want */
     padding-bottom: 10.5px;
 }
 
@@ -9,10 +9,10 @@
     font-size: 14px;
 }
 
-img.searchicon1 {
-    color: white !important;
+.nav-item {
+    padding: 0px 10px 0px 10px;
+    margin: 0 !important;
 }
-
 .navbar-nav.me-auto a {
     position: relative;
     text-decoration: none;
@@ -34,9 +34,193 @@ img.searchicon1 {
     left: 0;
     right: 0;
     bottom: -10px;
-    transition: width 0.50s cubic-bezier(0.4, 0, 1, 1);
+    transition: width 0.20s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .navbar-nav.me-auto a:hover::after {
     width: 100%;
+}
+
+.jplang {
+    font-size: 12px;
+    color: white;
+}
+
+.nav-link.jplang a:hover {
+    color:#2d61bf;
+    font-size: 5px;
+}
+
+.belowheader {
+    margin-left: 164px;
+    margin-top: -20px;
+    margin-right: 164px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.april2021 {
+    font-size: 17px;
+    font-weight: 650;
+    letter-spacing: 1;
+}
+
+.portalsite {
+    color: #00e;
+    text-decoration: none;
+}
+
+.blueportalsite {
+    color: #00e;
+    font-size: 17px;
+    font-weight: 650;
+    letter-spacing: 1;
+    line-height: normal;
+    margin-top: -14.5px;
+}
+
+.carousel {
+    margin: 0 auto;
+    max-width: 79%;
+}
+
+.carousel-caption {
+    border-width: 20px 20px;
+    text-align: left;
+    font-size: 20px;
+    color: white !important;
+    font-weight: bolder;
+    width: 100%;
+    display: block;
+    background-color: black;
+    opacity: 0.5;
+    margin: -1.8% -15%;
+    padding-left: 3%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+}
+
+.newsrelease1 {
+    margin: 0 auto;
+    width: 61%;
+    padding-top: 74px;
+    color: black;
+}
+
+.news {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+div span a {
+    text-decoration: none;
+    color: black;
+}
+
+span.index1 {
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 0.55px;
+}
+
+span.index1 a:hover {
+    color: #007aff;
+}
+
+.date1 {
+    margin-top: 30px;
+    margin-bottom: 7px;
+    font-size: 12.5px;
+}
+
+.events a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.events a:hover {
+    color: #007aff;
+}
+
+.important {
+    margin: 0 auto;
+    width: 61%;
+    padding-top: 74px;
+    color: black;
+}
+
+.notice {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+div span a {
+    text-decoration: none;
+    color: black;
+}
+
+span.index2 {
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 0.55px;
+}
+
+span.index2 a:hover {
+    color: #007aff;
+}
+
+img.redheart {
+    width: 19px;
+    margin-right: 15px;
+}
+
+.events.botspace {
+    margin-bottom: 100px;
+}
+
+.navbar.navbar-expand-lg.footy {
+    margin:0 auto; /*center the element*/
+    width: 81% !important;/* customize width you want */
+    padding-bottom: 10.5px;
+}
+
+.footer.flex {
+    padding-top: 7px;
+}
+
+.nav-item.foooter {
+    padding: 4px 20px;
+    margin: 0 !important;
+}
+
+.nav-item.fooooter {
+    padding-left: 2px;
+    font-size: 12px !important;
+}
+
+.nav-link.foooooter {
+    font-size: 12px;
+    color: white;
+}
+
+.nav-link.cp {
+    color: #898991;
+    font-size: 12px;
+    padding-left: 365px;
+}
+
+.nav.flex {
+    color: white;
+    text-decoration: none;
+}
+
+.nav.flex a:hover {
+    color: #b5b5c2;
+    text-decoration: underline;
+    text-decoration-color: white;
 }
