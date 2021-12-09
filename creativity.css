@@ -55,15 +55,15 @@
 
 /* Header */
 
-@import url("//fonts.googleapis.com/css?family=Pacifico&text=Pure");
-@import url("//fonts.googleapis.com/css?family=Roboto:700&text=css");
+@import url("//fonts.googleapis.com/css?family=Pacifico&text=CODING");
+@import url("//fonts.googleapis.com/css?family=Roboto:700&text=IS FUN");
 @import url("//fonts.googleapis.com/css?family=Kaushan+Script&text=!");
 
 body {
   min-height: 450px;
   height: 100vh;
   margin: 0;
-  background: radial-gradient(circle, #0077ea, #1f4f96, #1b2949, #000);
+  background: radial-gradient(circle, black, white, black, white);
 }
 
 .stage {
@@ -91,7 +91,7 @@ body {
 
 .layer:after {
   font: 150px/0.65 "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS", Helvetica, sans-serif;
-  content: "Coding is\a Fun!";
+  content: "CODING\a    IS FUN!";
   white-space: pre;
   text-align: center;
   height: 100%;
@@ -188,12 +188,12 @@ body {
 }
 
 .layer:nth-child(n+11):after {
-  -webkit-text-stroke: 15px dodgerblue;
-  text-shadow: 6px 0 6px #00366b, 5px 5px 5px #002951, 0 6px 6px #00366b;
+  -webkit-text-stroke: 15px grey;
+  text-shadow: 6px 0 6px grey, 5px 5px 5px black, 0 6px 6px grey;
 }
 
 .layer:nth-child(n+12):after {
-  -webkit-text-stroke: 15px #0077ea;
+  -webkit-text-stroke: 15px black;
 }
 
 .layer:last-child:after {
@@ -210,7 +210,6 @@ body {
     transform: rotateY(-40deg) rotateX(-43deg);
   }
 }
-
 /* Footer */
 
 .navbar.navbar-expand-lg.footy {
