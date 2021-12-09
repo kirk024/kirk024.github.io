@@ -56,7 +56,10 @@
 /* Header */
 
 #form {
-    padding-top: 30px;
+    padding-top: 1px;
+    padding-bottom: 50px;
+    height: 50;
+
   }
   input[type='select']{
     width: 20px;
@@ -103,7 +106,7 @@
     resize: none;
   }
 
-  /* Footer */
+/* Footer */
 
 .navbar.navbar-expand-lg.footy {
     margin:0 auto; /*center the element*/
@@ -113,6 +116,9 @@
 
 .footer.flex {
     padding-top: 7px;
+    width: 100% !important;
+    bottom: 0;
+    position: fixed;
 }
 
 .nav-item.foooter {
