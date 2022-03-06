@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report Siswa</title>
+    <title>Nilai Siswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Report Siswa</a>
+        <a class="navbar-brand" href="#">Nilai Siswa</a>
       
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -43,28 +43,32 @@
         <div class="container">
             <div class="py-5 text-center">
               <h2>Report Online</h2>
-              <p class="lead">Laporan Nilai Siswa/Siswi</p>
+              <p class="lead">Nilai Siswa/Siswi</p>
             </div>
       
               <div class="col-md-12">
-                <h4 class="mb-3">Data Report Siswa <button class="btn btn-md btn-primary" v-on:click="resetForm()">Add New Data </button>
+                <h4 class="mb-3">Data Nilai Siswa  <button class="btn btn-md btn-primary" v-on:click="resetForm()">Add New Data </button>
                 </h4>
                 <table class="table table-striped">
                     <tr>
-                        <th>Nama Lengkap</th>
-                        <th>Tempat Tanggal Lahir</th>
-                        <th>Alamat</th>
-                        <th>Nama Orang Tua</th>
+                        <th>ID Nilai Total</th>
+                        <th>ID Report</th>
                         <th>NIS</th>
+                        <th>Semester</th>
+                        <th>Mata Pelajaran</th>
+                        <th>Nilai Mata Pelajaran</th>
+                        <th>Ranking Siswa</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                     <tr v-for="user in users">
-                        <td>{{ user.namalengkap }}</td>
-                        <td>{{ user.tempattanggallahir }}</td>
-                        <td>{{ user.alamat }}</td>
-                        <td>{{ user.namaorangtua }}</td>
+                        <td>{{ user.id_nilaitotal }}</td>
+                        <td>{{ user.id_report }}</td>
                         <td>{{ user.NIS }}</td>
+                        <td>{{ user.semester }}</td>
+                        <td>{{ user.matapelajaran }}</td>
+                        <td>{{ user.nilaimatapelajaran }}</td>
+                        <td>{{ user.rankingsiswa }}</td>
                         <td><button class="btn btn-md btn-warning" v-on:click="getEdit(user)">Edit</button></td>
                         <td><button class="btn btn-danger" v-on:click="getDelete(user)">Delete</button></td>
                     </li>
@@ -79,41 +83,21 @@
                 <form class="needs-validation" novalidate>
                   <div class="row">
                     <div class="col-md-6 mb-3">
-                      <label for="namalengkap">Nama Lengkap</label>
-                      <input  v-model="namalengkap" type="text" class="form-control" id="namalengkap" placeholder="" value="" required>
+                      <label for="id_nilaitotal">ID Nilai Total</label>
+                      <input  v-model="id_nilaitotal" type="text" class="form-control" id="id_nilaitotal" placeholder="" value="" required>
                       <div class="invalid-feedback">
                         Valid first name is required.
                       </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                      <label for="tempattanggallahir">Tempat Tanggal Lahir</label>
-                      <input v-model="tempattanggallahir" type="text" class="form-control" id="tempattanggallahir" placeholder="" value="" required>
+                      <label for="id_report">ID Report</label>
+                      <input v-model="id_report" type="text" class="form-control" id="id_report" placeholder="" value="" required>
                       <div class="invalid-feedback">
                         Valid last name is required.
                       </div>
                     </div>
                   </div>
       
-                  <div class="mb-3">
-                    <label for="alamat">Alamat</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                      </div>
-                      <input v-model="alamat" type="text" class="form-control" id="alamat" placeholder="Alamat" required>
-                      <div class="invalid-feedback" style="width: 100%;">
-                        Your username is required.
-                      </div>
-                    </div>
-                  </div>
-      
-                  <div class="mb-3">
-                    <label for="namaorangtua">Nama Orang Tua <span class="text-muted"></span></label>
-                    <input v-model="namaorangtua" type="namaorangtua" class="form-control" id="namaorangtua" placeholder="Nama Orang Tua">
-                    <div class="invalid-feedback">
-                      Please enter a valid email address for shipping updates.
-                    </div>
-                  </div>
-
                   <div class="mb-3">
                     <label for="NIS">NIS</label>
                     <div class="input-group">
@@ -123,6 +107,46 @@
                       <div class="invalid-feedback" style="width: 100%;">
                         Your username is required.
                       </div>
+                    </div>
+                  </div>
+      
+                  <div class="mb-3">
+                    <label for="semester">Semester<span class="text-muted"></span></label>
+                    <input v-model="semester" type="semester" class="form-control" id="semester" placeholder="Semester">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="matapelajaran">Mata Pelajaran</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                      </div>
+                      <input v-model="matapelajaran" type="text" class="form-control" id="matapelajaran" placeholder="Mata Pelajaran" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Your username is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="nilaimatapelajaran">Nilai Mata Pelajaran</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                      </div>
+                      <input v-model="nilaimatapelajaran" type="text" class="form-control" id="nilaimatapelajaran" placeholder="Nilai Mata Pelajaran" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Your username is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="rankingsiswa">Ranking Siswa<span class="text-muted"></span></label>
+                    <input v-model="rankingsiswa" type="rankingsiswa" class="form-control" id="rankingsiswa" placeholder="Ranking Siswa">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
                     </div>
                   </div>
       
@@ -163,18 +187,20 @@
                 userIdDelete: null,
                 editMode: false,
                 deleteMode: false,
-                namalengkap: '',
-                tempattanggallahir: '',
-                alamat: '',
-                namaorangtua: '',
-                NIS:'',
+                id_nilaitotal:'',
+                id_report: '',
+                NIS: '',
+                semester: '',
+                matapelajaran: '',
+                nilaimatapelajaran:'',
+                rankingsiswa:'',
             },
             mounted: function() {
                 this.getUser();
             },
             methods: {
                 getUser() {
-                    axios.get('https://6224cea96c0e396620474c83.mockapi.io/Siswa')
+                    axios.get('https://6224cea96c0e396620474c83.mockapi.io/Nilai_Siswa')
                         .then(response => {
                             this.users = response.data;
                             console.log(response);
@@ -184,12 +210,14 @@
                         });
                 },
                 createUser: function(){
-                    axios.post('https://6224cea96c0e396620474c83.mockapi.io/Siswa', {
-                        namalengkap: this.namalengkap,
-                        tempattanggallahir: this.tempattanggallahir,
-                        alamat: this.alamat,
-                        namaorangtua: this.namaorangtua,
+                    axios.post('https://6224cea96c0e396620474c83.mockapi.io/Nilai_Siswa', {
+                        id_nilaitotal: this.id_nilaitotal,
+                        id_report: this.id_report,
                         NIS: this.NIS,
+                        semester: this.semester,
+                        matapelajaran: this.matapelajaran,
+                        nilaimatapelajaran: this.nilaimatapelajaran,
+                        rankingsiswa: this.rankingsiswa,
                     })
                     .then(response => {
                             this.getUser();
@@ -205,37 +233,46 @@
                     this.editMode = false;
                     this.deleteMode = false;
                     this.userIdEdit = null;
-                    this.namalengkap = null;
-                    this.tempattanggallahir = null;
-                    this.alamat = null;
-                    this.namaorangtua = null;
+                    this.id_report = null;
+                    this.NIS = null;
+                    this.semester = null;
+                    this.matapelajaran = null;
+                    this.nilaimatapelajaran = null;
+                    this.rankingsiswa = null;
                 },
                 getEdit: function (user) {
                     this.message = null;
                     this.editMode = true;
                     this.deleteMode = false;
-                    this.userIdEdit = user.NIS;
-                    this.namalengkap = user.namalengkap;
-                    this.tempattanggallahir = user.tempattanggallahir;
-                    this.alamat = user.alamat;
-                    this.namaorangtua = user.namaorangtua;
+                    this.userIdEdit = user.id_nilaitotal;
+                    this.id_report = user.id_report;
+                    this.NIS = user.NIS;
+                    this.semester = user.semester;
+                    this.matapelajaran = user.matapelajaran;
+                    this.nilaimatapelajaran = user.nilaimatapelajaran;
+                    this.rankingsiswa = user.rankingsiswa;
                 },
                 getDelete: function (user) {
                     this.message = null;
                     this.deleteMode = true;
                     this.editMode = false;
-                    this.userIdDelete = user.NIS;
-                    this.namalengkap = user.namalengkap;
-                    this.tempattanggallahir = user.tempattanggallahir;
-                    this.alamat = user.alamat;
-                    this.namaorangtua = user.namaorangtua;
+                    this.userIdDelete = user.id_nilaitotal;
+                    this.id_report = user.id_report;
+                    this.NIS = user.NIS;
+                    this.semester = user.semester;
+                    this.matapelajaran = user.matapelajaran;
+                    this.nilaimatapelajaran = user.nilaimatapelajaran;
+                    this.rankingsiswa = user.rankingsiswa;
                 },
                 updateUser: function () {
-                    axios.put(`https://6224cea96c0e396620474c83.mockapi.io/Siswa/${this.userIdEdit}`, {
-                            namalengkap: this.namalengkap,
-                            tempattanggallahir: this.tempattanggallahir,
-                            alamat: this.alamat,
-                            namaorangtua: this.namaorangtua,
+                    axios.put(`https://6224cea96c0e396620474c83.mockapi.io/Nilai_Siswa/${this.userIdEdit}`, {
+                            id_nilaitotal: this.id_nilaitotal,
+                            id_report: this.id_report,
+                            NIS: this.NIS,
+                            semester: this.semester,
+                            matapelajaran: this.matapelajaran,
+                            nilaimatapelajaran: this.nilaimatapelajaran,
+                            rankingsiswa: this.rankingsiswa,
                         })
                         .then(res => {
                             // handle success
@@ -249,7 +286,7 @@
                 },
                 // Delete User
                 deleteUser: function () {
-                    axios.delete(`https://6224cea96c0e396620474c83.mockapi.io/Siswa/${this.userIdDelete}`)
+                    axios.delete(`https://6224cea96c0e396620474c83.mockapi.io/Nilai_Siswa/${this.userIdDelete}`)
                         .then(res => {
                             // handle success
                             this.message = "Your data has been deleted";
